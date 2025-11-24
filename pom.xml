@@ -51,6 +51,24 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+            <!-- Downgrade flyway to 9.x -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-flyway</artifactId>
+                <version>4.0.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.flywaydb</groupId>
+                        <artifactId>flyway-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>9.22.3</version>
+                <scope>compile</scope>
+            </dependency>
             <dependency>
                 <groupId>net.ttddyy</groupId>
                 <artifactId>datasource-proxy</artifactId>

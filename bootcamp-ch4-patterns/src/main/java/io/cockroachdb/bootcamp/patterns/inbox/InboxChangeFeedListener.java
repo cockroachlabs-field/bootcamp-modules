@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.kafka.annotation.KafkaListener;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
 
 import io.cockroachdb.bootcamp.common.annotation.ServiceFacade;
 import io.cockroachdb.bootcamp.patterns.OrderService;
@@ -19,7 +17,7 @@ public class InboxChangeFeedListener {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private JsonMapper jsonMapper;
 
     @Autowired
     @Qualifier("inboxOrderService")
@@ -27,12 +25,8 @@ public class InboxChangeFeedListener {
 
     @KafkaListener(id = "inbox-demo", topics = "orders-inbox", groupId = "training-modules",
             properties = {"spring.json.value.default.type=io.cockroachdb.training.patterns.PurchaseOrderEvent"})
-    public void onPurchaseOrderEvent(PurchaseOrderEvent event)
-            throws JsonProcessingException {
-        logger.info("Received event: {}",
-                objectMapper.writer(new DefaultPrettyPrinter())
-                        .writeValueAsString(event));
-
+    public void onPurchaseOrderEvent(PurchaseOrderEvent event) {
+        logger.info("Received event: {}", jsonMapper.writer().writeValueAsString(event));
         orderService.placeOrder(event.getPayload());
     }
 }

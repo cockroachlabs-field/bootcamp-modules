@@ -3,10 +3,11 @@ package io.cockroachdb.bootcamp.patterns.outbox;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.deser.std.UUIDDeserializer;
-import com.fasterxml.jackson.databind.ser.std.UUIDSerializer;
+
+import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.JsonSerialize;
+import tools.jackson.databind.deser.jdk.UUIDDeserializer;
+import tools.jackson.databind.ser.jdk.UUIDSerializer;
 
 /**
  * A generic outbox event wrapper for CockroachDB CDC queries with 'bare' envelopes.
