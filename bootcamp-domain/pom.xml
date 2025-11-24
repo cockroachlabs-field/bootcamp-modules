@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.parent.groupId}</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>bootcamp-common</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -32,10 +32,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
+            <!-- Downgrade to avoid issues with 10.x -->
+            <version>9.22.3</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.ttddyy</groupId>

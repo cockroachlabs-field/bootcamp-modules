@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:26257/boop_camp?sslmode=require
+    url: jdbc:postgresql://localhost:26257/bootcamp?sslmode=require
     username: root
     password: cockroach

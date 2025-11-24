@@ -1,13 +1,12 @@
 ########################
 # Spring boot properties
-# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# https://docs.spring.io/spring-boot/appendix/application-properties/index.html
 ########################
 spring:
   output:
     ansi:
       enabled: ALWAYS
   flyway:
-    enabled: true
     clean-on-validation-error: true
     baseline-on-migrate: true
     clean-disabled: false
@@ -36,7 +35,7 @@ spring:
           use_second_level_cache: false
   #############################
   datasource:
-    url: jdbc:postgresql://localhost:26257/boop_camp?sslmode=disable
+    url: jdbc:postgresql://localhost:26257/bootcamp?sslmode=disable
     driver-class-name: org.postgresql.Driver
     username: root
     password:

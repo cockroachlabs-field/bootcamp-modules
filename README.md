@@ -72,11 +72,11 @@ for setup instructions. You can also use CockroachDB Cloud (basic, standard or a
 
 Then create the database, for an insecure cluster:
 
-    cockroach sql --insecure -e "create database boop_camp"
+    cockroach sql --insecure -e "create database bootcamp"
 
 alternatively, for a secure cluster:
 
-    cockroach sql --certs-dir=certs -e "CREATE DATABASE boop_camp; ALTER ROLE root WITH PASSWORD 'cockroach'"
+    cockroach sql --certs-dir=certs -e "CREATE DATABASE bootcamp; ALTER ROLE root WITH PASSWORD 'cockroach'"
 
 An [enterprise license](https://www.cockroachlabs.com/docs/stable/licensing-faqs.html#obtain-a-license) is needed for some of the chapters that 
 use enterprise features like follower reads and CDC.
