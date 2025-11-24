@@ -21,18 +21,18 @@
 
 <img align="left" src="logo.png" width="64"/>
 
-Spring Boot code samples referenced from the 
+Spring Boot camp modules referenced from the 
 [Java Developer Training]([Spring](https://docs.google.com/presentation/d/1-uUnbs9TPBW-ISPGW4D6ukms5Kogelh9vK-2QOGLt_k/edit?usp=sharing)) 
 presentation deck.
 
 # Modules
 
-- [Chapter 1 :: Transactions](ch1-transactions/README.md)
-- [Chapter 2 :: Contention](ch2-contention/README.md)
-- [Chapter 3 :: Performance](ch3-performance/README.md)
-- [Chapter 4 :: Patterns](ch4-patterns/README.md)
-- [Common](common/README.md)
-- [Domain](domain/README.md)
+- [Chapter 1 :: Transactions](bootcamp-ch1-transactions/README.md)
+- [Chapter 2 :: Contention](bootcamp-ch2-contention/README.md)
+- [Chapter 3 :: Performance](bootcamp-ch3-performance/README.md)
+- [Chapter 4 :: Patterns](bootcamp-ch4-patterns/README.md)
+- [Common](bootcamp-common/README.md)
+- [Domain](bootcamp-domain/README.md)
 
 # Compatibility
 
@@ -72,11 +72,11 @@ for setup instructions. You can also use CockroachDB Cloud (basic, standard or a
 
 Then create the database, for an insecure cluster:
 
-    cockroach sql --insecure -e "create database training_modules"
+    cockroach sql --insecure -e "create database boop_camp"
 
 alternatively, for a secure cluster:
 
-    cockroach sql --certs-dir=certs -e "CREATE DATABASE training_modules; ALTER ROLE root WITH PASSWORD 'cockroach'"
+    cockroach sql --certs-dir=certs -e "CREATE DATABASE boop_camp; ALTER ROLE root WITH PASSWORD 'cockroach'"
 
 An [enterprise license](https://www.cockroachlabs.com/docs/stable/licensing-faqs.html#obtain-a-license) is needed for some of the chapters that 
 use enterprise features like follower reads and CDC.
