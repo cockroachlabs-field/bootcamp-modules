@@ -13,11 +13,11 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 
-import io.cockroachdb.bootcamp.common.annotation.ServiceFacade;
-import io.cockroachdb.bootcamp.common.annotation.TimeTravel;
-import io.cockroachdb.bootcamp.common.annotation.TimeTravelMode;
-import io.cockroachdb.bootcamp.common.annotation.TransactionExplicit;
-import io.cockroachdb.bootcamp.common.annotation.TransactionImplicit;
+import io.cockroachdb.bootcamp.domain.annotation.ServiceFacade;
+import io.cockroachdb.bootcamp.domain.annotation.TimeTravel;
+import io.cockroachdb.bootcamp.domain.annotation.TimeTravelMode;
+import io.cockroachdb.bootcamp.domain.annotation.TransactionExplicit;
+import io.cockroachdb.bootcamp.domain.annotation.TransactionImplicit;
 import io.cockroachdb.bootcamp.domain.model.Product;
 import io.cockroachdb.bootcamp.domain.model.PurchaseOrder;
 import io.cockroachdb.bootcamp.domain.model.PurchaseOrderItem;

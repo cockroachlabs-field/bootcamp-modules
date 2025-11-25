@@ -6,13 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.resilience.annotation.Retryable;
 
-import io.cockroachdb.bootcamp.common.annotation.ServiceFacade;
-import io.cockroachdb.bootcamp.common.annotation.TransactionExplicit;
+import io.cockroachdb.bootcamp.domain.annotation.ServiceFacade;
+import io.cockroachdb.bootcamp.domain.annotation.TransactionExplicit;
 import io.cockroachdb.bootcamp.domain.model.Product;
 import io.cockroachdb.bootcamp.domain.model.PurchaseOrder;
 import io.cockroachdb.bootcamp.domain.model.ShipmentStatus;
 import io.cockroachdb.bootcamp.domain.repository.OrderRepository;
 import io.cockroachdb.bootcamp.domain.repository.ProductRepository;
+import io.cockroachdb.bootcamp.domain.retry.TransientExceptionClassifier;
 import io.cockroachdb.bootcamp.domain.util.AssertUtils;
 import io.cockroachdb.bootcamp.patterns.BusinessException;
 import io.cockroachdb.bootcamp.patterns.OrderService;
@@ -27,7 +28,7 @@ public class OutboxOrderService implements OrderService {
 
     @Override
     @TransactionExplicit
-    @Retryable(predicate = io.cockroachdb.bootcamp.common.retry.TransientExceptionClassifier.class,
+    @Retryable(predicate = TransientExceptionClassifier.class,
             maxRetries = 5,
             maxDelay = 15_0000,
             multiplier = 1.5)

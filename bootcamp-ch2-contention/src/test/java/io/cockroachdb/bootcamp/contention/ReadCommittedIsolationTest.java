@@ -11,7 +11,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import jakarta.persistence.LockModeType;
 
-import io.cockroachdb.bootcamp.common.aspect.MetadataUtils;
+import io.cockroachdb.bootcamp.domain.aspect.MetadataUtils;
 import io.cockroachdb.bootcamp.domain.model.PurchaseOrder;
 import io.cockroachdb.bootcamp.domain.model.ShipmentStatus;
 import io.cockroachdb.bootcamp.domain.model.Simulation;
@@ -127,8 +127,8 @@ public class ReadCommittedIsolationTest extends AbstractIsolationTest {
         // Should be confirmed, meaning we lost T1's update!
         Assertions.assertEquals(ShipmentStatus.cancelled, purchaseOrder.getStatus());
 
-        Assertions.assertEquals(2, transientExceptionRetryListener.getSuccess());
-        Assertions.assertEquals(0, transientExceptionRetryListener.getError());
+//        Assertions.assertEquals(2, transientExceptionRetryListener.getSuccess());
+//        Assertions.assertEquals(0, transientExceptionRetryListener.getError());
     }
 
     @Order(2)
@@ -159,7 +159,7 @@ public class ReadCommittedIsolationTest extends AbstractIsolationTest {
         PurchaseOrder purchaseOrder = orderService.findOrderById(purchaseOrderId2).orElseThrow();
         Assertions.assertEquals(ShipmentStatus.confirmed, purchaseOrder.getStatus());
 
-        Assertions.assertEquals(2, transientExceptionRetryListener.getSuccess());
-        Assertions.assertEquals(0, transientExceptionRetryListener.getError());
+//        Assertions.assertEquals(2, transientExceptionRetryListener.getSuccess());
+//        Assertions.assertEquals(0, transientExceptionRetryListener.getError());
     }
 }

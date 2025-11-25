@@ -15,9 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import io.cockroachdb.bootcamp.Chapter1Application;
-import io.cockroachdb.bootcamp.common.aspect.MetadataUtils;
-import io.cockroachdb.bootcamp.common.retry.TransientExceptionClassifier;
-import io.cockroachdb.bootcamp.common.retry.TransientExceptionRetryListener;
+import io.cockroachdb.bootcamp.domain.aspect.MetadataUtils;
+import io.cockroachdb.bootcamp.domain.retry.TransientExceptionClassifier;
+import io.cockroachdb.bootcamp.domain.retry.TransientExceptionRetryListener;
 import io.cockroachdb.bootcamp.domain.model.Product;
 import io.cockroachdb.bootcamp.domain.model.PurchaseOrder;
 import io.cockroachdb.bootcamp.domain.model.ShipmentStatus;

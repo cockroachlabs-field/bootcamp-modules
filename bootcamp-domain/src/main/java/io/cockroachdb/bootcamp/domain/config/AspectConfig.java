@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Role;
 
-import io.cockroachdb.bootcamp.common.aspect.TransactionDecoratorAspect;
+import io.cockroachdb.bootcamp.domain.aspect.TransactionDecoratorAspect;
 
 @Configuration
 @EnableAspectJAutoProxy(proxyTargetClass = true)

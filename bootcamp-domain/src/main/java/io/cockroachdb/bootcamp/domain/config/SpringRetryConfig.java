@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Role;
 import org.springframework.resilience.annotation.EnableResilientMethods;
 
-import io.cockroachdb.bootcamp.common.aspect.AdvisorOrder;
-import io.cockroachdb.bootcamp.common.retry.TransientExceptionClassifier;
-import io.cockroachdb.bootcamp.common.retry.TransientExceptionRetryListener;
+import io.cockroachdb.bootcamp.domain.aspect.AdvisorOrder;
+import io.cockroachdb.bootcamp.domain.retry.TransientExceptionClassifier;
+import io.cockroachdb.bootcamp.domain.retry.TransientExceptionRetryListener;
 
 @Configuration
 @EnableResilientMethods(proxyTargetClass = true, order = AdvisorOrder.TRANSACTION_RETRY_ADVISOR)

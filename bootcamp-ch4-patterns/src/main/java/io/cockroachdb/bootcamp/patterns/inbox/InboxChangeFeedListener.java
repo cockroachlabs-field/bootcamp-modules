@@ -8,7 +8,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 
 import tools.jackson.databind.json.JsonMapper;
 
-import io.cockroachdb.bootcamp.common.annotation.ServiceFacade;
+import io.cockroachdb.bootcamp.domain.annotation.ServiceFacade;
 import io.cockroachdb.bootcamp.patterns.OrderService;
 import io.cockroachdb.bootcamp.patterns.PurchaseOrderEvent;
 
@@ -24,7 +24,7 @@ public class InboxChangeFeedListener {
     private OrderService orderService;
 
     @KafkaListener(id = "inbox-demo", topics = "orders-inbox", groupId = "training-modules",
-            properties = {"spring.json.value.default.type=io.cockroachdb.training.patterns.PurchaseOrderEvent"})
+            properties = {"spring.json.value.default.type=io.cockroachdb.bootcamp.patterns.PurchaseOrderEvent"})
     public void onPurchaseOrderEvent(PurchaseOrderEvent event) {
         logger.info("Received event: {}", jsonMapper.writer().writeValueAsString(event));
         orderService.placeOrder(event.getPayload());

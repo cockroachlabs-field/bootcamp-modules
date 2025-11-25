@@ -35,7 +35,6 @@
         <module>bootcamp-ch2-contention</module>
         <module>bootcamp-ch3-performance</module>
         <module>bootcamp-ch4-patterns</module>
-        <module>bootcamp-common</module>
         <module>bootcamp-domain</module>
     </modules>
 

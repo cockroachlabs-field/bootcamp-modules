@@ -17,7 +17,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
 import io.cockroachdb.bootcamp.Chapter1Application;
-import io.cockroachdb.bootcamp.common.aspect.MetadataUtils;
+import io.cockroachdb.bootcamp.domain.aspect.MetadataUtils;
 import io.cockroachdb.bootcamp.domain.model.Customer;
 import io.cockroachdb.bootcamp.domain.model.Product;
 import io.cockroachdb.bootcamp.domain.model.PurchaseOrder;

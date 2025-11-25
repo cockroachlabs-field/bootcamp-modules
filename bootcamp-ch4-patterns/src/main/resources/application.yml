@@ -3,8 +3,6 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 ########################
 spring:
-  profiles:
-    active: domain
   flyway:
     placeholders:
       cdc-sink-url: kafka://localhost:9092
@@ -20,3 +18,5 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  jackson:
+    use-jackson2-defaults: true

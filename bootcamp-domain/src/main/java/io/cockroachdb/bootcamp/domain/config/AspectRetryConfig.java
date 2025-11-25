@@ -6,9 +6,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Role;
 
-import io.cockroachdb.bootcamp.common.aspect.ExponentialBackoffRetryHandler;
-import io.cockroachdb.bootcamp.common.aspect.RetryHandler;
-import io.cockroachdb.bootcamp.common.aspect.TransactionRetryAspect;
+import io.cockroachdb.bootcamp.domain.aspect.ExponentialBackoffRetryHandler;
+import io.cockroachdb.bootcamp.domain.aspect.RetryHandler;
+import io.cockroachdb.bootcamp.domain.aspect.TransactionRetryAspect;
 
 /**
  * Alternative to spring-retry.

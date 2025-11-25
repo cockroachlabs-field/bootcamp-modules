@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.util.Assert;
 
-import io.cockroachdb.bootcamp.common.aspect.AdvisorOrder;
+import io.cockroachdb.bootcamp.domain.aspect.AdvisorOrder;
 
 @Component
 @Aspect

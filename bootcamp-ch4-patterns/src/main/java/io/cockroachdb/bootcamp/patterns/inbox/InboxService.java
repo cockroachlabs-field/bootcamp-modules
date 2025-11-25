@@ -3,9 +3,10 @@ package io.cockroachdb.bootcamp.patterns.inbox;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.resilience.annotation.Retryable;
 
-import io.cockroachdb.bootcamp.common.annotation.ServiceFacade;
-import io.cockroachdb.bootcamp.common.annotation.TransactionImplicit;
+import io.cockroachdb.bootcamp.domain.annotation.ServiceFacade;
+import io.cockroachdb.bootcamp.domain.annotation.TransactionImplicit;
 import io.cockroachdb.bootcamp.domain.model.PurchaseOrder;
+import io.cockroachdb.bootcamp.domain.retry.TransientExceptionClassifier;
 
 @ServiceFacade
 public class InboxService {
@@ -13,7 +14,7 @@ public class InboxService {
     private InboxRepository inboxRepository;
 
     @TransactionImplicit
-    @Retryable(predicate = io.cockroachdb.bootcamp.common.retry.TransientExceptionClassifier.class,
+    @Retryable(predicate = TransientExceptionClassifier.class,
             maxRetries = 5,
             maxDelay = 15_0000,
             multiplier = 1.5)

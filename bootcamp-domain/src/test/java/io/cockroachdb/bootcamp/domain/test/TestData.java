@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.util.Assert;
 
-import io.cockroachdb.bootcamp.common.annotation.TransactionExplicit;
-import io.cockroachdb.bootcamp.common.annotation.TransactionImplicit;
+import io.cockroachdb.bootcamp.domain.annotation.TransactionExplicit;
+import io.cockroachdb.bootcamp.domain.annotation.TransactionImplicit;
 import io.cockroachdb.bootcamp.domain.model.Customer;
 import io.cockroachdb.bootcamp.domain.model.Product;
 import io.cockroachdb.bootcamp.domain.repository.CustomerRepository;

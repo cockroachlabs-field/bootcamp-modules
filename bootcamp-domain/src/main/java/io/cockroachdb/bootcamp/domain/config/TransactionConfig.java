@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Role;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import io.cockroachdb.bootcamp.common.aspect.AdvisorOrder;
+import io.cockroachdb.bootcamp.domain.aspect.AdvisorOrder;
 
 @Configuration
 @EnableJpaRepositories(basePackages = "io.cockroachdb.bootcamp", enableDefaultTransactions = false)
