@@ -21,8 +21,8 @@
 
 <img align="left" src="logo.png" width="64"/>
 
-Spring Boot 4x. bootcamp modules referenced from the 
-[Java Developer Training]([Spring](https://docs.google.com/presentation/d/1-uUnbs9TPBW-ISPGW4D6ukms5Kogelh9vK-2QOGLt_k/edit?usp=sharing)) 
+Spring Boot 4 bootcamp modules referenced from the 
+[Java Developer Training](https://docs.google.com/presentation/d/1-uUnbs9TPBW-ISPGW4D6ukms5Kogelh9vK-2QOGLt_k/edit?usp=sharing) 
 presentation deck.
 
 # Modules
@@ -31,7 +31,6 @@ presentation deck.
 - [Chapter 2 :: Contention](bootcamp-ch2-contention/README.md)
 - [Chapter 3 :: Performance](bootcamp-ch3-performance/README.md)
 - [Chapter 4 :: Patterns](bootcamp-ch4-patterns/README.md)
-- [Common](bootcamp-common/README.md)
 - [Domain](bootcamp-domain/README.md)
 
 # Compatibility
