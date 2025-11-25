@@ -1,5 +1,5 @@
 <p>	
-	<a href="https://github.com/cockroachlabs-field/training-modules/actions/workflows/maven.yml"><img src="https://github.com/cockroachlabs-field/training-modules/actions/workflows/maven.yml/badge.svg?branch=main" alt="">
+	<a href="https://github.com/cockroachlabs-field/bootcamp/actions/workflows/maven.yml"><img src="https://github.com/cockroachlabs-field/bootcamp/actions/workflows/maven.yml/badge.svg?branch=main" alt="">
 </p>
 
 <!-- TOC -->
@@ -21,7 +21,7 @@
 
 <img align="left" src="logo.png" width="64"/>
 
-Spring Boot camp modules referenced from the 
+Spring Boot 4x. bootcamp modules referenced from the 
 [Java Developer Training]([Spring](https://docs.google.com/presentation/d/1-uUnbs9TPBW-ISPGW4D6ukms5Kogelh9vK-2QOGLt_k/edit?usp=sharing)) 
 presentation deck.
 
@@ -85,7 +85,7 @@ use enterprise features like follower reads and CDC.
 
 ### Clone the project
 
-    git clone git@github.com:cockroachlabs-field/training-modules.git && cd training-modules
+    git clone git@github.com:cockroachlabs-field/bootcamp-modules.git && cd bootcamp-modules
 
 ### Build the artifact
 
@@ -96,14 +96,11 @@ use enterprise features like follower reads and CDC.
 
 Pick the training chapter you want to run the tests in, for example chapter 1.
 
-    cd ch1-transactions
+    cd bootcamp-ch1-transactions
 
 Then run the test starter script which will present a menu of options:
 
     ./run-test.sh
-
-If you need to connect to a CockroachCloud cluster or non-local cluster, you can edit the
-`./run-server.sh` file accordingly.
 
 # Terms of Use
 

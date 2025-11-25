@@ -23,7 +23,7 @@ public class InboxChangeFeedListener {
     @Qualifier("inboxOrderService")
     private OrderService orderService;
 
-    @KafkaListener(id = "inbox-demo", topics = "orders-inbox", groupId = "training-modules",
+    @KafkaListener(id = "inbox-demo", topics = "orders-inbox", groupId = "bootcamp",
             properties = {"spring.json.value.default.type=io.cockroachdb.bootcamp.patterns.PurchaseOrderEvent"})
     public void onPurchaseOrderEvent(PurchaseOrderEvent event) {
         logger.info("Received event: {}", jsonMapper.writer().writeValueAsString(event));

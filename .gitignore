@@ -7,4 +7,4 @@ target/
 .DS_Store?
 Thumbs.db
 /bash.lnk
-training-modules-domain/src/main/resources/application-dev.yml
+bootcamp-domain/src/main/resources/application-dev.yml

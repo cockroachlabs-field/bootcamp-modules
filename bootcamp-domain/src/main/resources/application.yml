@@ -1,18 +1,15 @@
-########################
-# Spring boot properties
-# https://docs.spring.io/spring-boot/appendix/application-properties/index.html
-########################
 spring:
   profiles:
-    active: default
+    active: chapter
   output:
     ansi:
       enabled: ALWAYS
   flyway:
-#    baseline-on-migrate: true
-#    clean-disabled: false
-    enabled: true
-  #    execute-in-transaction: false
+    baseline-on-migrate: true
+    clean-disabled: false
+    execute-in-transaction: false
+    placeholders:
+      cdc-sink-url: kafka://localhost:9092
   jpa:
     open-in-view: false
     properties:

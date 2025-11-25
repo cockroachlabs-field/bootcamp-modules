@@ -17,7 +17,7 @@ public class OutboxChangeFeedListener {
     @Autowired
     private JsonMapper jsonMapper;
 
-    @KafkaListener(id = "outbox-demo", topics = "orders-outbox", groupId = "training-modules",
+    @KafkaListener(id = "outbox-demo", topics = "orders-outbox", groupId = "bootcamp",
             properties = {"spring.json.value.default.type=io.cockroachdb.bootcamp.patterns.PurchaseOrderEvent"})
     public void onPurchaseOrderEvent(PurchaseOrderEvent event) {
         logger.info("Received event: {}",

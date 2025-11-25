@@ -97,9 +97,9 @@
     <inceptionYear>2025</inceptionYear>
 
     <scm>
-        <connection>scm:git:https://github.com/cockroachlabs-field/training-modules.git</connection>
-        <developerConnection>scm:git:https://github.com/cockroachlabs-field/training-modules.git</developerConnection>
-        <url>https://github.com/cockroachlabs-field/training-modules.git</url>
+        <connection>scm:git:https://github.com/cockroachlabs-field/bootcamp-modules.git</connection>
+        <developerConnection>scm:git:https://github.com/cockroachlabs-field/bootcamp-modules.git</developerConnection>
+        <url>https://github.com/cockroachlabs-field/bootcamp-modules.git</url>
         <tag>HEAD</tag>
     </scm>
 
